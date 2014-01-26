@@ -4,3 +4,10 @@ Makefile
 cmake_install.cmake
 *.o
 sim2d
+Sim2D.cbp
+.cproject
+.project
+Sim2D.kdev*
+Sim2D.sublime-project
+*.ninja
+.ninja*
