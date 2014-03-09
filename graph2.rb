@@ -19,8 +19,9 @@ mydata.each do |pair|
   coords.push pair
 end
 puts $xmax,$xmin,$ymax,$ymin
-  $xscale = 1.0/(($xmax.abs+$xmin.abs)/width.to_f)
-  $yscale = 1.0/(($ymax.abs+$ymin.abs)/height.to_f)
+$xscale,$yscale = 1,1
+  $xscale = 1.0/(($xmax.abs+$xmin.abs)/width.to_f) if ((($xmax.abs+$xmin.abs)/width.to_f) != 0)
+  $yscale = 1.0/(($ymax.abs+$ymin.abs)/height.to_f) if ((($ymax.abs+$ymin.abs)/height.to_f) != 0)
 puts $xscale, $yscale
 def plot(x,y)
   clear
